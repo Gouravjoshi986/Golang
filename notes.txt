@@ -1,0 +1,78 @@
+1.// Static typed language
+type must be explicitally mentioned or it should be inferred 
+var myName dataType = value 
+or 
+myName := value 
+// You can convert one thing into another using type conversion 
+
+2.// Strongly Typed Language 
+int and string cant be added like js. Checking is thorough 
+
+3.// Go is compiled Language not interpreted.
+
+4.// Fast compile time 
+
+5.// Built in concurrency
+you dont have to install packages to do stuff around concurrency or threads .
+Goroutines is built in the language to do this stuff. 
+
+6.// Simplicity (concise syntax / garbage collection etc)
+
+
+7. Package - a folder with collection of go files. 
+8. Module - a collection of packages 
+// when we initialise a project we first initialise a module. done using
+// go mod init moduleName
+// it also contains all the information about things that we have installed dependencies along with their versions 
+
+
+9. Creating a File 
+// make a file with extension .go 
+// initialize a package name on top using 
+package main  - this package tells the code to look for main function in this file. 
+
+10. Function creation is done by keyword func functionName(args){ ..code.. }
+// package main will give an error if main fucntion is not declared in the file 
+
+11. Printing and other things are located in the "fmt" package . this can be imported using :
+// import "fmt" 
+eg. fmt.Println(value) // other func in docs
+
+12. // Go files can be compiled using  : go build path/filename.go 
+-> this creates a binary file (compiled) which can be run by ./filename
+
+or We can directly use: go run path/filename.go
+
+// we must use whatever we declare in go. 
+13. We have data types like 
+  1. int int8 int16 int32 int64 
+  2. uint unit8 ....
+  3. float32 float64
+  4. string 
+  5. rune
+  6. Bool 
+// if we use anything outside of range we get compile time error. 
+** // But if we do this during Runtime : we dont get any errors it just gives garbage values. (Debugging Hell)
+
+14. Arithmetic opearations : we cant + - * / but we cant do opearations between different data types. If we have to do it we must typecast . 
+
+// on division if in decimal -> rounded down 
+// we can also cooncatenate strings
+
+// you can use back ticks to format the string.
+
+15. len("value") -> this doesnt give the number of character in string but rather the no of bytes.  // we can do this using an import called "unicode/utf8"  --> utf8.RuneCountInString("value") -- count no of runes in the string
+
+16. If we dont initialize any value. go assigns them a default value. int,uint,float,rune->0 
+string->'' bool -> false
+
+17. We can also create a variable but dont mention the type if we are also initializing it at the same time. This way the type is inferred. 
+// eg: var myvar = "text" -> (string) inferred 
+// We can drop the var and use shorthand:= 
+// myVar := "text" 
+// We can also initialize many variables in a row
+using =>  name1, name2, name3 = val1, val2, val3
+
+
+
+
