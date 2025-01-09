@@ -74,5 +74,25 @@ string->'' bool -> false
 using =>  name1, name2, name3 = val1, val2, val3
 
 
+18. We can also run functions in the main functions. and there can not be more than 1 main functions so either you can import the other go files in the main.go file. or keep all files in the same location and use go run .
+// we can also pass parameters in the functions. 
+// func funcName(param paramDataType){..}
+// we can also specify the return type.
 
+// func funcName(param paramDataType)ReturnDataType {
+....      
+}
+// we can also return multiple things at once. 
+
+19. We can use Printf along with %v for strings.
+
+// 20. There is an errors package in golang with error Data type. Its default value is nil. 
+// We can use it as a return type and only return something if error is nil. 
+// var err error 
+// err = errors.New("Error message")
+
+21. // Control Statements - in if else statements 
+else must be on the same line as the ending curly bracket. 
+// In Switch case statements , the break is by default implied so we dont have to write it.
+// switch cases can be conditional or non conditional. 
 
