@@ -89,10 +89,62 @@ using =>  name1, name2, name3 = val1, val2, val3
 // 20. There is an errors package in golang with error Data type. Its default value is nil. 
 // We can use it as a return type and only return something if error is nil. 
 // var err error 
-// err = errors.New("Error message")
+// err = errors.New("Error message") (package : errors)
 
 21. // Control Statements - in if else statements 
 else must be on the same line as the ending curly bracket. 
 // In Switch case statements , the break is by default implied so we dont have to write it.
 // switch cases can be conditional or non conditional. 
 
+22. // Arrays : the default values are set to be 0 .  var name [size]dataType 
+// we can access it like any other language 
+// we can also print the address of the elements using the & symbol.  
+
+// To initialize it while declaring we use : 
+// var arr [3]int32 = [3]int32{1,2,3} 
+or 
+// arr := [3]int32{1,2,3} or arr:= [...]int32{1,2,3}   
+// [...] - the compiler will interpret the size
+
+23. // Slices wrap around array to give a more powerful ,convinient interface of sequence of data
+// ie - a more advanced kind of array with func
+  var intSlice []int32 = []int32{1,2,3}
+  .. we can append data : intSlice = append(intSlice,4)
+
+// In this append method . the system checks if there is enough capacity in the slice or not. 
+// if not then it creates a new slice and copies the array along with appended element.
+// Len and Cap are different in slices. 
+// The increase in len is +1. but increase in cap is ??. 
+
+// we can find it using len(sliceName) and cap(sliceName).  : we cant access the out of length things - we get index out of range error.
+
+// we can also use spread operator to append one slice into another. 
+// and we can use make function to create a slice. 
+
+24. // MAPS 
+ : we can create map using : var name map["key data type"]ValueDataType = make(map["Key data type"]value data type)
+ or 
+ : var name = map[string]int8{"key1":value1,"key2":value2}
+
+// *  You have to be careful . if you tried to return the value of a key that is not in map , it will simple return default value (0,fasle etc)
+
+// map returns a boolean value along with real value to specify if the given key is in the map or not   :  var age1,ok1 = myMap2["Adam"]
+
+// Go has built in delete for map. 
+// delete(mapName,key) -- deletes by reference so no return value 
+
+25. // Loops 
+for i,v:= range myArr{
+		fmt.Printf("Index: %v Value: %v\n",i,v)
+	}  // we can use loops just with a for keyword 
+ and use range for iterating over complete DS
+
+ // for while loop we can use an condition after for =>  for i>10 {...do this...}  or for{ if i>10{break} ...do this.. }
+
+ ** // the same thing can be achieved using this syntax 
+	for i:=0;i<10;i++{
+		fmt.Println(i)
+	} 
+
+26. // there is also a time import in go. "time"
+// it has functions like * time.Now()  * time.Since('some times stamp')  and return type like time.Duration
