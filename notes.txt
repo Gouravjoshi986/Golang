@@ -148,3 +148,13 @@ for i,v:= range myArr{
 
 26. // there is also a time import in go. "time"
 // it has functions like * time.Now()  * time.Since('some times stamp')  and return type like time.Duration
+
+27. // Strings - we can create strings using : var str string = "value" 
+// but we cant access it due to go using utf 8 instead of ascii --> instead of arrray of characters they are treated as an array of bytes. 
+
+// so we declare it as an array of runes. 
+: var str = []rune("value") 
+-- > check out the strings,bytes,runes.go file
+// this is a headache in go 
+
+28. // We use string package in go 
