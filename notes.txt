@@ -157,4 +157,4 @@ for i,v:= range myArr{
 -- > check out the strings,bytes,runes.go file
 // this is a headache in go 
 
-28. // We use string package in go 
+28. // We use "strings" package in go 
